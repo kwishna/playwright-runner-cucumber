@@ -1,0 +1,29 @@
+{
+  "name": "playwright-bdd-test",
+  "author": "Krishna Kumar Singh",
+  "description": "Playwright test runner for executing tests",
+  "keywords": [
+    "playwright-test",
+    "playwright-bdd",
+    "cucumberjs"
+  ],
+  "scripts": {
+    "pw:report": "playwright show-report",
+    "pw:test": "playwright test ./example[.]*.spec.ts",
+    "pw:smoke": "playwright test --project smoke",
+    "pw:failed": "playwright test --last-failed",
+    "pw:grep:and": "npx playwright test --project=smoke --grep \"(?=.*@title)(?=.*@link)\"",
+    "pw:grep:or": "npx playwright test --project=smoke --grep \"@title|@link\"",
+    "pw:grep": "npx playwright test --project=smoke --grep \"@title\""
+  },
+  "dependencies": {
+    "allure-playwright": "^3.0.0-beta.7",
+    "dotenv": "^16.4.5",
+    "playwright-bdd": "^7.0.1",
+    "ts-node": "^10.9.2"
+  },
+  "devDependencies": {
+    "@playwright/test": "^1.45.3",
+    "@types/node": "^20.14.11"
+  }
+}
