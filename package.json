@@ -14,11 +14,15 @@
     "pw:failed": "playwright test --last-failed",
     "pw:grep:and": "npx playwright test --project=smoke --grep \"(?=.*@title)(?=.*@link)\"",
     "pw:grep:or": "npx playwright test --project=smoke --grep \"@title|@link\"",
-    "pw:grep": "npx playwright test --project=smoke --grep \"@title\""
+    "pw:grep": "npx playwright test --project=smoke --grep \"@title\"",
+    "test": "playwright test",
+    "watch:bdd": "nodemon -w ./features -w ./steps -e feature,js,ts --exec \"npx bddgen\"",
+    "watch:pw": "playwright test --ui"
   },
   "dependencies": {
     "allure-playwright": "^3.0.0-beta.7",
     "dotenv": "^16.4.5",
+    "nodemon": "^3.1.4",
     "playwright-bdd": "^7.0.1",
     "ts-node": "^10.9.2"
   },
